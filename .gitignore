@@ -1,0 +1,71 @@
+# Created by https://www.gitignore.io/api/laravel
+
+### Laravel ###
+vendor/
+node_modules/
+npm-debug.log
+app/token.json
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Google API Tokens
+app/token.json
+app/credentials.json
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+storage/*.key
+database/*.sqlite
+.env.*.php
+.env.php
+.env
+.env.testing
+.env.old
+.env.testing.old
+Homestead.yaml
+Homestead.json
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+# PHPStorm
+.idea/
+.DS_Store
+deploy/*.yml
+deploy/*.yml-*
+deploy/*.config
+sample.envs
+
+# sublime text
+.phpintel/
+
+# Google Sheets API Credentials
+app/credentials.json
+app/token.json
+
+build/
+
+# Test Coverage Report
+report
+coverage.html/
+coverage.html
+
+# Email Files (include)
+!resources/views/vendor/
+# horizon  files
+!public/vendor/horizon/
+# vscode
+.vscode
+crontab
+
+# vim
+*.swp
+*.swo
+.env.copy
+.php_cs.cache
+
+#misc
+dump.rdb

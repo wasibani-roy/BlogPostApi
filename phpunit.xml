@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+            <exclude>
+                <directory suffix=".php">./app/Policies/</directory>
+                <directory suffix=".php">./app/Http/Middleware/</directory>
+                <directory suffix=".php">./app/Models/</directory>
+                <directory suffix=".php">./app/User.php</directory>
+                <directory suffix=".php">./app/PrePipFellow.php</directory>
+                <directory suffix=".php">./app/Feedback.php</directory>
+                <directory suffix=".php">./app/SheetsService.php</directory>
+                <directory suffix=".php">./app/Http/Kernel.php</directory>
+                <directory suffix=".php">./app/Exceptions/Handler.php</directory>
+                <directory suffix=".php">./app/Providers/</directory>
+                <directory suffix=".php">./app/Mail/</directory>
+                <directory suffix=".php">./app/Http/Controllers/Auth/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+     <logging>
+        <log type="coverage-html" target="./report"
+            lowUpperBound="50" highLowerBound="80" />
+    </logging>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="pgsql"/>
+    </php>
+</phpunit>
